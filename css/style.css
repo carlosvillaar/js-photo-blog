@@ -33,6 +33,8 @@ main .container-card{
   width: 345px;
   height: 370px;
   margin-bottom: 40px;
+  -webkit-box-shadow: 9px 5px 15px 0px #000000; 
+  box-shadow: 9px 5px 15px 0px #000000;
 }
 
 .card-img img{
@@ -52,3 +54,4 @@ main .container-card{
   top: -10px;
   left: 155px;
 }
+
