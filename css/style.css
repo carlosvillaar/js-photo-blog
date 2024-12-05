@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.debug{
+  border: 1px solid red;
+}
+
+header{
+  background-image: url('../assets_day1/img/wall.png');
+}
+
+h1{
+  font-size: 7rem;
+  font-weight: 600;
+  font-style: italic;
+  padding: 30px 10px;
+}
