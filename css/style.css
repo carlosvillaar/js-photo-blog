@@ -10,6 +10,9 @@
 
 header{
   background-image: url('../assets_day1/img/wall.png');
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 h1{
@@ -31,7 +34,7 @@ main .container-card{
 
 .custom-card{
   width: 345px;
-  height: 370px;
+  height: 410px;
   margin-bottom: 40px;
   -webkit-box-shadow: 9px 5px 15px 0px #000000; 
   box-shadow: 9px 5px 15px 0px #000000;
@@ -39,7 +42,7 @@ main .container-card{
 
 .card-img img{
   width: 300px;
-  height: 300px;
+  height: 350px;
   padding: 20px 0;
 }
 
