@@ -10,6 +10,10 @@ axios.get(api_url)
     printCards(url, title)
   }
 })
+.catch((err)=> {
+  console.log(`Errore, riprova piu tardi`, err);
+  
+})
 
 function printCards(par1, par2){
   containerCard.innerHTML += `<div class="custom-card text-bg-light position-relative mx-4">
@@ -23,4 +27,4 @@ function printCards(par1, par2){
           <p>${par2}</p>
         </div>
       </div>`
-}
+};
