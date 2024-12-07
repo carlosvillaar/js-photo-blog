@@ -36,21 +36,20 @@ main .container-card{
   width: 345px;
   height: 410px;
   margin-bottom: 40px;
-  -webkit-box-shadow: 9px 5px 15px 0px #000000; 
   box-shadow: 9px 5px 15px 0px #000000;
+  transition-duration: .3s;
 }
 
-.custom-card button{
-  border: none;
-  margin: 0;
-  padding: 0;
-  background-color: #F8F9FA;
+.custom-card:hover{
+  transform: rotate(10deg);
+  box-shadow: 15px 12px 20px 0px #000000;
 }
 
 .card-img img{
   width: 300px;
   height: 350px;
   padding: 20px 0;
+  cursor: pointer;
 }
 
 .card-text{
