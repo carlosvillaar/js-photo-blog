@@ -5,26 +5,33 @@ const overlayButton = document.querySelector('.close');
 const overlayImg = document.getElementById('overlay-img');
 const clickableImage = document.querySelector('.clickabel-img')
 
-let dataApi;
+let dataApi; //data da fetch
 axios.get(api_url)
 .then((response) => {
   dataApi = response.data;
   for (let i = 0; i < dataApi.length; i++){
     const {albumId, id, title, url, thumbnailUrl} = dataApi[i];
-    printCards(url, capitalizeWords(title));
-    addEventListener('click', () =>{
-      printImg(url)
-      show(overlay)
-    })
-  }
-})
+    printCard(url, capitalizeWords(title));
+    }
+    
+  const allCustomCards = document.querySelectorAll('.custom-card')
 
+  for (let i = 0; i < allCustomCards.length; i++) {
+    allCustomCards[i].addEventListener('click', () => {
+      printImg(dataApi[i].url)
+      show(overlay)
+      })
+  }
+  overlayButton.addEventListener('click', () =>  hide(overlay));
+})
 .catch((err)=> {
   console.log(`Errore, riprova piu tardi`, err);
 });
 
-function printCards(par1, par2){
-  containerCard.innerHTML += `<div class="custom-card text-bg-light position-relative mx-4">
+
+
+function printCard(par1, par2){
+  return containerCard.innerHTML += `<div class="custom-card text-bg-light position-relative mx-4">
         <div class="pin">
           <img src="./assets_day1/img/pin.svg" alt="pin">
         </div>
